@@ -1,0 +1,7 @@
+name = "nexa_explorer"
+description = "Trace relevant code, tests, and dependencies."
+model = "gpt-6-luna"
+model_reasoning_effort = "low"
+developer_instructions = """
+Trace relevant code, tests, and dependencies. Return evidence with file references. Work read-only.
+"""
