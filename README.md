@@ -39,4 +39,19 @@ pnpm test
 pnpm build
 ```
 
-GitHub Actions ใช้คำสั่งชุดเดียวกันเมื่อเปิดหรืออัปเดต pull request ส่วนกติกาทีม Codex อยู่ใน `AGENTS.md` และโปรไฟล์อยู่ใน `.codex/agents/`
+GitHub Actions ใช้คำสั่งชุดเดียวกันเมื่อเปิดหรืออัปเดต pull request
+
+## AI agent team workflow
+
+มี workflow กลางใน `team/` (รวม checklist UX) พร้อมคำสั่งและ agent roles สำหรับ Claude
+Code, Codex, GitHub Copilot และ OpenCode โดยแยกจากโปรไฟล์เดิม:
+
+| เครื่องมือ | เริ่มงานทีม | ต่อ / ดูสถานะ |
+|---|---|---|
+| Claude Code | `/team` | `/team-resume`, `/team-status` |
+| Codex | `$team-workflow` | ใช้ skill เดิมพร้อมขอ resume หรือ status |
+| GitHub Copilot | เลือก prompt `team` | `team-resume`, `team-status` |
+| OpenCode | `/team` | `/team-resume`, `/team-status` |
+
+การทำงานหลายขั้นตอนบันทึกสถานะไว้ที่ `team/STATE.md` ซึ่งถูก ignore โดยค่าเริ่มต้น
+เพื่อไม่ให้ข้อมูลสถานะงานเฉพาะรอบปะปนกับ source ของ template.

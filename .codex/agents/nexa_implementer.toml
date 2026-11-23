@@ -1,7 +1,0 @@
-name = "nexa_implementer"
-description = "Implement the assigned change within its file scope, run focused checks, and report the changes and results to the primary agent."
-model = "gpt-6.2-sol"
-model_reasoning_effort = "low"
-developer_instructions = """
-Implement the assigned change within its file scope, run focused checks, and report the changes and results to the primary agent.
-"""

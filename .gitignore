@@ -11,3 +11,7 @@ coverage/
 *.db-*
 *.sqlite
 *.sqlite-*
+team/STATE.md
+team/BRIEF.md
+team/PROPOSAL.md
+team/review/

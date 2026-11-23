@@ -1,7 +1,0 @@
-name = "nexa_visual_checker"
-description = "Inspect screenshots or the running interface against the task requirements."
-model = "gpt-6.1-terra"
-model_reasoning_effort = "low"
-developer_instructions = """
-Inspect screenshots or the running interface against the task requirements. Report concrete visual or interaction issues. Work read-only.
-"""

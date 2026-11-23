@@ -1,7 +1,0 @@
-name = "nexa_reviewer"
-description = "Review the integrated change for correctness, regressions, security, and data integrity."
-model = "gpt-6.2-sol"
-model_reasoning_effort = "medium"
-developer_instructions = """
-Review the integrated change for correctness, regressions, security, and data integrity. Report actionable findings with file locations, and verify fixes when asked. Work read-only.
-"""

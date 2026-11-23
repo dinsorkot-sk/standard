@@ -12,12 +12,10 @@ The primary agent may delegate scoped implementation, investigation, and verific
 
 ## Model selection and usage
 
-Keep the primary agent on the session's selected model. When spawning a subagent, select a model the current client exposes and honor explicit user choices.
-
-- Use a lighter model such as GPT-6 Luna for narrow exploration, straightforward edits, or test triage if available. Use GPT-6.1 Terra for visual inspection when the client exposes it.
-- Use GPT-6.2 Sol for implementation or review that needs deeper reasoning, and use GPT-6.2 Astra when the complexity or risk justifies it. If a named model is unavailable, choose the closest available model for the task.
-- Keep small tasks with the primary agent when delegation would duplicate context. Give subagents only the context they need and use the lowest reasoning effort appropriate for the work. Keep the required review even when conserving usage.
-- Use the client's usage information when available. Model selection and parallelism can affect consumption, but do not assume models have separate weekly limits.
+For team-mode model selection and usage, follow `team/TEAM.md`. Claude, Codex, and OpenCode
+must choose from the models available through their own provider and use a model suited to
+the task's complexity and risk. Do not assume another provider's model names or limits
+apply.
 
 ## When to delegate review
 
@@ -32,3 +30,12 @@ If review finds a problem affecting functionality, security, or data correctness
 ## Git and release actions
 
 The primary agent may edit files, run checks, and create local commits within the task scope. Obtain explicit user approval before pushing, opening a pull request, merging remotely, or deploying.
+
+## Commit co-author attribution
+
+- When adding a `Co-authored-by` trailer for an AI coding agent, use only the product
+  display name `Claude`, `Codex`, or `OpenCode`.
+- Do not include the model name, model version, provider, or other model details in the
+  co-author display name.
+- Keep the standard Git trailer format (`Co-authored-by: Name <email>`) and use the
+  configured, valid email for that product identity. Never invent an email address.
